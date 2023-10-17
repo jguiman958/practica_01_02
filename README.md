@@ -1,2 +1,3 @@
 # practica_01_02
-Segunda practica lamp
+## Segunda practica lamp
+## Guia de instalación.
