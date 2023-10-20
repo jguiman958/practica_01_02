@@ -61,3 +61,6 @@ sudo mysql -u root <<< "DROP USER IF EXISTS $PMA_USER@'%'"
 sudo mysql -u root <<< "CREATE USER $PMA_USER@'%' IDENTIFIED BY '$PMA_PASS'"
 sudo mysql -u root <<< "GRANT ALL PRIVILEGES ON $PMA_DB.* TO $PMA_USER@'%'"
 
+sed -i "/blowfish_secret/a \$cfg\['TempDir'\] = '/tmp';" /var/www/html/phpmyadmin/config.inc.php 
+
+sudo chown -R apache:apache /var/www/html
